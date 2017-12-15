@@ -5,14 +5,14 @@
  */
 package Jogo;
 
-/**
- *
- * @author ogi
- */
+import java.util.Scanner;
+
 public class Logica {
 
     public Logica() {
     }
+
+    Scanner sc = new Scanner(System.in);
 
     String[][] matriz = {{"1", "2", "3"}, {"4", "5", "6"}, {"7", "8", "9"}};
 
@@ -28,8 +28,8 @@ public class Logica {
         return casa;
     }
 
-    public String realizarJogada(String posicao, String j) {
-        String l = "Jogada Realizada";
+    public String declararJogada(String posicao, String j) {
+        String mensagem = "Jogada Realizada";
 
         if (posicao.equals("1")) {
             matriz[0][0] = j;
@@ -52,12 +52,13 @@ public class Logica {
         } else if (!posicao.equals("9") && !posicao.equals("8") && !posicao.equals("7") && !posicao.equals("6")
                 && !posicao.equals("5") && !posicao.equals("4") && !posicao.equals("3") && !posicao.equals("2")
                 && !posicao.equals("1")) {
-            l = "número inválido";
+            mensagem = "número inválido";
         }
-        return l;
+        return posicao;
     }
 
-    public boolean validarJogada(String posicao) {
+    public boolean validarJogada() {
+        String posicao = this.declararJogada(sc.next(), sc.next());
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 if (matriz[i][j].equals(posicao)) {
