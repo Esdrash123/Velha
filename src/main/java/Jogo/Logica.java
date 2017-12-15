@@ -28,27 +28,27 @@ public class Logica {
         return casa;
     }
 
-    public String declararJogada(String posicao, String j) {
+    public String declararJogada(String posicao, String elemento) {
         String mensagem = "Jogada Realizada";
 
         if (posicao.equals("1")) {
-            matriz[0][0] = j;
+            matriz[0][0] = elemento;
         } else if (posicao.equals("2")) {
-            matriz[0][1] = j;
+            matriz[0][1] = elemento;
         } else if (posicao.equals("3")) {
-            matriz[0][2] = j;
+            matriz[0][2] = elemento;
         } else if (posicao.equals("4")) {
-            matriz[1][0] = j;
+            matriz[1][0] = elemento;
         } else if (posicao.equals("5")) {
-            matriz[1][1] = j;
+            matriz[1][1] = elemento;
         } else if (posicao.equals("6")) {
-            matriz[1][2] = j;
+            matriz[1][2] = elemento;
         } else if (posicao.equals("7")) {
-            matriz[2][0] = j;
+            matriz[2][0] = elemento;
         } else if (posicao.equals("8")) {
-            matriz[2][1] = j;
+            matriz[2][1] = elemento;
         } else if (posicao.equals("9")) {
-            matriz[2][2] = j;
+            matriz[2][2] = elemento;
         } else if (!posicao.equals("9") && !posicao.equals("8") && !posicao.equals("7") && !posicao.equals("6")
                 && !posicao.equals("5") && !posicao.equals("4") && !posicao.equals("3") && !posicao.equals("2")
                 && !posicao.equals("1")) {
@@ -67,6 +67,14 @@ public class Logica {
             }
         }
         return false;
+    }
+
+    public void realizarJogada() {
+
+    }
+
+    public void alterarJogador() {
+
     }
 
     public String Ganhou(int jogadas) {
