@@ -30,7 +30,7 @@ public class Url {
     @Path("status")
     public String status() {
 
-        return main.logica.vitoria(main.getContadorDeJogadas()) + "<br><br>" + main.logica.tabuleiro();
+        return main.logica.definirVencedor(main.getContadorDeJogadas()) + "<br><br>" + main.logica.tabuleiro();
 
     }
 

@@ -23,13 +23,11 @@ public class Main {
     }
 
     public String rodarJogo(String posicao, String elemento) {
-        //9 é o numero de jogadas maximas ou seja um empate abaixo desse numero o jogo roda
-        if (contadorDeJogadas < 9) {
-            return logica.tabuleiro() + "<br> Jogo finalizado";
-        }
+
         //Quando o jogo da empate
         if (contadorDeJogadas == 9) {
-            return logica.tabuleiro();
+
+            return logica.tabuleiro() + "<br> Jogo deu empate>";
         }
         if (logica.validarJogada(posicao) == true) {
             logica.declararJogada(posicao, elemento);
@@ -39,6 +37,7 @@ public class Main {
         }
         return logica.tabuleiro();
     }
+//altera o jogador com base no elemento escolhido
 
     public void alterarJogador() {
         if (this.contadorDeTurnos == 0) {
@@ -46,13 +45,14 @@ public class Main {
             this.contadorDeTurnos++;
         } else if (this.contadorDeTurnos == 1) {
             this.elementoInicial = "X";
+            this.contadorDeTurnos--;
         }
     }
 
     public String reiniciarJogo() {
 
         this.logica = new Logica();
-        this.elementoInicial = "O";
+        this.elementoInicial = "X";
         this.contadorDeTurnos = 0;
         this.contadorDeJogadas = 0;
 

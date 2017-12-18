@@ -69,34 +69,34 @@ public class Logica {
     }
 //Define o ganhador da partida ou se ha um empate tendo como base a quantidade de jogadas 
 
-    public String vitoria(int jogadas) {
+    public String definirVencedor(int jogadas) {
 
-        String[] T = new String[8];
+        String[] vetor = new String[8];
         String vencedor = "Ainda não acabou";
 
         if (jogadas == 9) {
             vencedor = "Os dois ganharam!";
         }
 
-        T[0] = matriz[0][0] + matriz[0][1] + matriz[0][2];
-        T[1] = matriz[1][0] + matriz[1][1] + matriz[1][2];
-        T[2] = matriz[2][0] + matriz[2][1] + matriz[2][2];
+        vetor[0] = matriz[0][0] + matriz[0][1] + matriz[0][2];
+        vetor[1] = matriz[1][0] + matriz[1][1] + matriz[1][2];
+        vetor[2] = matriz[2][0] + matriz[2][1] + matriz[2][2];
 
-        T[3] = matriz[0][0] + matriz[1][0] + matriz[2][0];
-        T[4] = matriz[0][1] + matriz[1][1] + matriz[2][1];
-        T[5] = matriz[0][2] + matriz[1][2] + matriz[2][2];
+        vetor[3] = matriz[0][0] + matriz[1][0] + matriz[2][0];
+        vetor[4] = matriz[0][1] + matriz[1][1] + matriz[2][1];
+        vetor[5] = matriz[0][2] + matriz[1][2] + matriz[2][2];
 
-        T[6] = matriz[0][0] + matriz[1][1] + matriz[2][2];
-        T[7] = matriz[0][2] + matriz[1][1] + matriz[2][0];
+        vetor[6] = matriz[0][0] + matriz[1][1] + matriz[2][2];
+        vetor[7] = matriz[0][2] + matriz[1][1] + matriz[2][0];
 
-        for (int i = 0; i < T.length; i++) {
-            if (T[i].equals("xxx")) {
+        for (int i = 0; i < vetor.length; i++) {
+            if (vetor[i].equals("xxx")) {
                 vencedor = " Jogador 1";
-            } else if (T[i].equals("000")) {
+            } else if (vetor[i].equals("000")) {
                 vencedor = " Jogador 2";
             }
         }
-        return "Ainda não acabou";
+        return vencedor;
     }
 
 }
