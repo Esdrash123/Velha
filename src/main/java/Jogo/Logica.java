@@ -5,17 +5,14 @@
  */
 package Jogo;
 
-import java.util.Scanner;
-
 public class Logica {
 
     public Logica() {
     }
 
-    Scanner sc = new Scanner(System.in);
-
     String[][] matriz = {{"1", "2", "3"}, {"4", "5", "6"}, {"7", "8", "9"}};
 
+    //Cria tabuleiro com 9 casas
     public String tabuleiro() {
 
         String casa = "";
@@ -23,13 +20,14 @@ public class Logica {
             for (int j = 0; j < 3; j++) {
                 casa = casa + "  " + (matriz[i][j]);
             }
-            casa = casa + "\n";
+            casa = casa + "<br>";
         }
         return casa;
     }
+    //Declara jogada a ser feita
 
     public String declararJogada(String posicao, String elemento) {
-        String mensagem = "Jogada Realizada";
+        String mensagem = " ";
 
         if (posicao.equals("1")) {
             matriz[0][0] = elemento;
@@ -54,11 +52,12 @@ public class Logica {
                 && !posicao.equals("1")) {
             mensagem = "número inválido";
         }
-        return posicao;
+        return mensagem;
     }
 
-    public boolean validarJogada() {
-        String posicao = this.declararJogada(sc.next(), sc.next());
+    //Verifica se a posicao desejada esta nas opcoes possiveis de jogadas
+    public boolean validarJogada(String posicao) {
+
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 if (matriz[i][j].equals(posicao)) {
@@ -68,32 +67,25 @@ public class Logica {
         }
         return false;
     }
+//Define o ganhador da partida ou se ha um empate tendo como base a quantidade de jogadas 
 
-    public void realizarJogada() {
-
-    }
-
-    public void alterarJogador() {
-
-    }
-
-    public String Ganhou(int jogadas) {
+    public String vitoria(int jogadas) {
 
         String[] T = new String[8];
-        String vencedor = "null";
+        String vencedor = "Ainda não acabou";
 
         if (jogadas == 9) {
-            vencedor = "OPS, deu velha ngm";
+            vencedor = "Os dois ganharam!";
         }
-        //linha
+
         T[0] = matriz[0][0] + matriz[0][1] + matriz[0][2];
         T[1] = matriz[1][0] + matriz[1][1] + matriz[1][2];
         T[2] = matriz[2][0] + matriz[2][1] + matriz[2][2];
-        //coluna
+
         T[3] = matriz[0][0] + matriz[1][0] + matriz[2][0];
         T[4] = matriz[0][1] + matriz[1][1] + matriz[2][1];
         T[5] = matriz[0][2] + matriz[1][2] + matriz[2][2];
-        //Diagonal
+
         T[6] = matriz[0][0] + matriz[1][1] + matriz[2][2];
         T[7] = matriz[0][2] + matriz[1][1] + matriz[2][0];
 
@@ -104,7 +96,7 @@ public class Logica {
                 vencedor = " Jogador 2";
             }
         }
-        return vencedor;
+        return "Ainda não acabou";
     }
 
 }
