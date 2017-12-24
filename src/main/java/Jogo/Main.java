@@ -13,7 +13,6 @@ public class Main {
     String elementoInicial = "X";
     int contadorDeJogadas = 0;
     int contadorDeTurnos = 0;
-    String vencedor = logica.definirVencedor(contadorDeJogadas);
 
     public String getElementoInicial() {
         return elementoInicial;
@@ -22,13 +21,14 @@ public class Main {
     public int getContadorDeJogadas() {
         return contadorDeJogadas;
     }
+    String vencedor = logica.definirVencedor(contadorDeJogadas);
 
     public String rodarJogo(String posicao, String elemento) {
-        String vencedor = logica.definirVencedor(contadorDeJogadas);
-        if (vencedor == "Jogador 1") {
+
+        if (vencedor == "1") {
             return vencedor + "<br> Jogo finalizado: vencedor jogador 1";
         }
-        if (vencedor == "Jogador 2") {
+        if (vencedor == "2") {
             return vencedor + "<br> Jogo finalizado: vencedor jogador 2";
         }
         //Quando o jogo da empate

@@ -89,13 +89,11 @@ public class Logica {
         vetor[6] = matriz[0][0] + matriz[1][1] + matriz[2][2];
         vetor[7] = matriz[0][2] + matriz[1][1] + matriz[2][0];
 
-        if (jogadas >= 5 && jogadas < 9) {
-            for (int i = 0; i < vetor.length; i++) {
-                if (vetor[i].equals("xxx")) {
-                    vencedor = " Jogador 1";
-                } else if (vetor[i].equals("000")) {
-                    vencedor = " Jogador 2";
-                }
+        for (int i = 0; i < vetor.length; i++) {
+            if (vetor[i].equals("XXX")) {
+                vencedor = "1";
+            } else if (vetor[i].equals("000")) {
+                vencedor = "2";
             }
         }
         return vencedor;
