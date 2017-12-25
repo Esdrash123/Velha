@@ -72,11 +72,7 @@ public class Logica {
     public String definirVencedor(int jogadas) {
 
         String[] vetor = new String[8];
-        String vencedor = "Ainda não acabou";
-
-        if (jogadas == 9) {
-            vencedor = "Os dois ganharam!";
-        }
+        String vencedor = "";
 
         vetor[0] = matriz[0][0] + matriz[0][1] + matriz[0][2];
         vetor[1] = matriz[1][0] + matriz[1][1] + matriz[1][2];
@@ -88,12 +84,16 @@ public class Logica {
 
         vetor[6] = matriz[0][0] + matriz[1][1] + matriz[2][2];
         vetor[7] = matriz[0][2] + matriz[1][1] + matriz[2][0];
+        
+        if (jogadas == 9) {
+            vencedor = "Empate!";
+        }
 
         for (int i = 0; i < vetor.length; i++) {
             if (vetor[i].equals("XXX")) {
-                vencedor = "1";
-            } else if (vetor[i].equals("000")) {
-                vencedor = "2";
+                vencedor = "A";
+            } else if (vetor[i].equals("OOO")) {
+                vencedor = "B";
             }
         }
         return vencedor;

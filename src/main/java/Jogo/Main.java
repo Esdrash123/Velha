@@ -21,15 +21,14 @@ public class Main {
     public int getContadorDeJogadas() {
         return contadorDeJogadas;
     }
-    String vencedor = logica.definirVencedor(contadorDeJogadas);
 
     public String rodarJogo(String posicao, String elemento) {
 
-        if (vencedor == "1") {
-            return vencedor + "<br> Jogo finalizado: vencedor jogador 1";
+        if (logica.definirVencedor(contadorDeJogadas).equals("A")) {
+            return logica.tabuleiro() + "<br> Jogo finalizado: vencedor jogador 1";
         }
-        if (vencedor == "2") {
-            return vencedor + "<br> Jogo finalizado: vencedor jogador 2";
+        if (logica.definirVencedor(contadorDeJogadas).equals("B")) {
+            return logica.tabuleiro() + "<br> Jogo finalizado: vencedor jogador 2";
         }
         //Quando o jogo da empate
         if (contadorDeJogadas == 9) {
