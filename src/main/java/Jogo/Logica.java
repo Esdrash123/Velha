@@ -22,7 +22,7 @@ public class Logica {
             }
             casa = casa + "<br>";
         }
-        return casa;
+        return casa + "<button href='index.html'> Voltar para tabela</button>";
     }
     //Declara jogada a ser feita
 
