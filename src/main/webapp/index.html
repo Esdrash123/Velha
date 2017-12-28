@@ -5,6 +5,73 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
-        <h1>Bem vindo jogo da velha!! </h1>
+        <h1 align="center">Bem vindo jogo da velha!! </h1>
+
+
+        <script>
+            function jogar1() {
+                location.href = "http://localhost:8084/Velha/rest/app/jogar?posicao=1";
+
+            }
+            function jogar2() {
+                location.href = "http://localhost:8084/Velha/rest/app/jogar?posicao=2";
+
+            }
+            function jogar3() {
+                location.href = "http://localhost:8084/Velha/rest/app/jogar?posicao=3";
+
+            }
+            function jogar4() {
+                location.href = "http://localhost:8084/Velha/rest/app/jogar?posicao=4";
+
+            }
+            function jogar5() {
+                location.href = "http://localhost:8084/Velha/rest/app/jogar?posicao=5";
+
+            }
+            function jogar6() {
+                location.href = "http://localhost:8084/Velha/rest/app/jogar?posicao=6";
+
+            }
+            function jogar7() {
+                location.href = "http://localhost:8084/Velha/rest/app/jogar?posicao=7";
+
+            }
+            function jogar8() {
+                location.href = "http://localhost:8084/Velha/rest/app/jogar?posicao=8";
+
+            }
+            function jogar9() {
+                location.href = "http://localhost:8084/Velha/rest/app/jogar?posicao=9";
+
+            }
+            function status() {
+                locatio.href = "http://localhost:8084/Velha/rest/app/status";
+            }
+            function resetar() {
+                location.href = "http://localhost:8084/Velha/rest/app/reiniciar";
+            }
+        </script>
+
+
+        <table align="center" border="7" style="width: 50px; height: 50px">
+            <tr>
+                <td alingn="center"> <input style = "width: 50px; height:50px " type = "button" value = "1" onclick= "jogar1()"></td>
+                <td alingn="center"> <input style = "width: 50px; height:50px " type = "button" value = "2" onclick= "jogar2()"></td>
+                <td alingn="center"> <input style = "width: 50px; height:50px " type = "button" value = "3" onclick= "jogar3()"></td>
+            </tr>
+            <tr>
+                <td alingn="center"> <input style = "width: 50px; height:50px " type = "button" value = "4" onclick= "jogar4()"></td>
+                <td alingn="center"> <input style = "width: 50px; height:50px " type = "button" value = "5" onclick= "jogar5()"></td>
+                <td alingn="center"> <input style = "width: 50px; height:50px " type = "button" value = "6" onclick= "jogar6()"></td>
+            </tr>
+            <tr>
+                <td alingn="center"> <input style = "width: 50px; height:50px " type = "button" value = "7" onclick= "jogar7()"></td>
+                <td alingn="center"> <input style = "width: 50px; height:50px " type = "button" value = "8" onclick= "jogar8()"></td>
+                <td alingn="center"> <input style = "width: 50px; height:50px " type = "button" value = "9" onclick= "jogar9()"></td>
+            </tr>
+        </table>
+        <input style = "width: 100px; height:50px " type = "button" value = "Status do jogo" onclick= "status()">
+        <input style = "width: 100px; height:50px " type = "button" value = "Resetar jogo" onclick= "resetar()"> <br>
     </body>
 </html>

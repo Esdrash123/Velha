@@ -84,7 +84,7 @@ public class Logica {
 
         vetor[6] = matriz[0][0] + matriz[1][1] + matriz[2][2];
         vetor[7] = matriz[0][2] + matriz[1][1] + matriz[2][0];
-        
+
         if (jogadas == 9) {
             vencedor = "Empate!";
         }

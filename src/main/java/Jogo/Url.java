@@ -22,6 +22,7 @@ public class Url {
     @Path("jogar")
     public String realizarJogada(@QueryParam("posicao") String posicao) {
 
+        
         return main.rodarJogo(posicao, main.getElementoInicial());
 
     }
