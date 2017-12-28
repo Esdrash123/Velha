@@ -27,11 +27,11 @@ public class Main {
         if (logica.definirVencedor(contadorDeJogadas).equals("A")) {
             return logica.tabuleiro() + "<br> Jogo finalizado: vencedor jogador 1";
         }
-        if (logica.definirVencedor(contadorDeJogadas).equals("B")) {
+        else if (logica.definirVencedor(contadorDeJogadas).equals("B")) {
             return logica.tabuleiro() + "<br> Jogo finalizado: vencedor jogador 2";
         }
         //Quando o jogo da empate
-        if (contadorDeJogadas == 9) {
+        else if (contadorDeJogadas == 9) {
 
             return logica.tabuleiro() + "<br> <h1>Jogo deu empate</h1>";
         }
