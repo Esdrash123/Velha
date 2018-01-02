@@ -14,7 +14,7 @@ public class Logica {
 
     //Cria tabuleiro com 9 casas
     public String tabuleiro() {
-
+        String link = "<a href='http://localhost:8084/Velha/'> Voltar para tabela</a>";
         String casa = "";
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -22,7 +22,7 @@ public class Logica {
             }
             casa = casa + "<br>";
         }
-        return casa + "<button href='index.html'> Voltar para tabela</button>";
+        return casa +"<br>"+ link;
     }
     //Declara jogada a ser feita
 

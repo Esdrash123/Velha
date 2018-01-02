@@ -39,7 +39,7 @@ public class Url {
     @Path("reiniciar")
     public String reiniciar() {
 
-        return main.reiniciarJogo();
+        return main.reiniciarJogo()+"<br>"+"<a href='http://localhost:8084/Velha/'> Voltar para tabela</a>";
 
     }
 }
